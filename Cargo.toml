@@ -1,0 +1,22 @@
+[package]
+name = "rotozoom-wasm-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Rotozoom effect exported to WASM"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+# See: https://github.com/johnthagen/min-sized-rust
+[profile.release]
+overflow-checks = false
+codegen-units = 1
+strip = true
+opt-level = "s"
+#panic = "abort"
+lto = true
+debug = true # needed for wasm-snip when calling: wasm-snip target/wasm32-unknown-unknown/release/rotozoom_wasm_rs.wasm -o rotozoom.wasm _ZN4core9panicking18panic_bounds_check17h55dca86566afb41aE
+
+[profile.dev]
+panic = "abort"
