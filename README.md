@@ -6,6 +6,7 @@
 <img src="https://img.shields.io/badge/arm-ready-cyan.svg">
 <a href="https://github.com/karl-rousseau/rotozoom-wasm/blob/main/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg"></a>
 </div>
+<script type="text/java-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 ---
 ## Preamble
