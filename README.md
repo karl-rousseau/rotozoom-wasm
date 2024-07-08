@@ -6,7 +6,6 @@
 <img src="https://img.shields.io/badge/arm-ready-cyan.svg">
 <a href="https://github.com/karl-rousseau/rotozoom-wasm/blob/main/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg"></a>
 </div>
-<script type="text/java-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 ---
 ## Preamble
@@ -58,11 +57,11 @@ wasm-tools print target/wasm32-unknown-unknown/release/rotozoom_wasm_rs.wasm
 
 ### Algorithm
 
-The whole effect is based on 2D transformation used in Computer Graphics and specifically on this rotation matrix calculus in cartesian coordinate system using this formula:
-$$\begin{equation}\begin{bmatrix} X_{new} \\ Y_{new} \end{bmatrix} = \begin{bmatrix} cos(θ) & -sin(θ) \\ sin(θ) & cos(θ) \end{bmatrix}* \begin{bmatrix} X_{old} \\ Y_{old} \end{bmatrix}\end{equation}$$
-For the algorithm code, previous equation (1) can be written and simplified into discrete math such as:
-$$ X_{new} = X_{old} * cos(θ) - Y_{old} * sin(θ)\\
-Y_{new} = X_{old} * sin(θ) + Y_{old} * cos(θ)$$
+The whole effect is based on 2D transformation used in Computer Graphics and specifically on this rotation matrix calculus in cartesian coordinate system using this formula:<br/>
+<img src="https://latex.codecogs.com/svg.image?\begin{bmatrix}X_{new}\\Y_{new}\end{bmatrix}=\begin{bmatrix}cos(\Theta)&-sin(\Theta)\\sin(\Theta)&cos(\Theta)\\\end{bmatrix}x\begin{bmatrix}X_{old}\\Y_{old}\end{bmatrix}"><br/>
+For the algorithm code, previous equation can be written and simplified into discrete math such as:<br/>
+<img src="https://latex.codecogs.com/svg.image?X_{new}=X_{old}*cos(\Theta)-Y_{old}*sin(\Theta)"><br/>
+<img src="https://latex.codecogs.com/svg.image?Y_{new}=X_{old}*sin(\Theta)&plus;Y_{old}*cos(\Theta)">
 
 ## Reference
 
